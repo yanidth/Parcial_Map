@@ -32,25 +32,3 @@ let btnTrees = document.getElementById("btnTrees");
 
 btnTrees.addEventListener("click", ()=> alert('Hola'));
 
-
-
-async function loadPolygon() {
-    
-    let myDates = await fetch('arboles.geojson');
-    let myPolygon = await myDates.json();
-    
-    L.geoJSON(myPolygon,
-        {
-            style:{
-
-                color:"green"
-
-            }
-
-        }
-    
-    ).addTo(map);
-
-}
-
-loadPolygon();

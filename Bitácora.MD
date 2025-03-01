@@ -53,7 +53,10 @@ Descargar los datos filtrados desde la API, conocido como SERVICIO REST
 // => https://datosabiertos.bogota.gov.co/dataset/censo-arbolado-urbano => https://geoportal.jbb.gov.co/agc/rest/services/SIGAU/CensoArbol/MapServer/0
 # 
 
-
+// https://geojson.io/#map=16.38/4.690433/-74.077554
+// https://bogota-laburbano.opendatasoft.com/explore/dataset/barrios_prueba/table/?flg=es&q=la+alborada&location=12,4.59473,-74.09107&basemap=jawg.streets
+// https://datosabiertos.bogota.gov.co/dataset/censo-arbolado-urbano
+// https://geoportal.jbb.gov.co/agc/rest/services/SIGAU/CensoArbol/MapServer/0
 #
 
 
