@@ -1,1 +1,10 @@
-#map { height: 180px; }
+#map { height: 100%; }
+
+#buttonContainer{ 
+
+    position: relative;
+    top: 10px;
+    left: 100px;
+    z-index: 1000;
+
+ }
