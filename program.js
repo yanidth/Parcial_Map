@@ -97,11 +97,11 @@ function generatePDF(distances, totalTrees){
     let {jsPDF} = window.jspdf;
     let documentPDF =new jsPDF();
 
-    documentPDF.text('Distancias entre arboles del Barrio La Alborada', 10, 10);
+    documentPDF.text('Distancias entre árboles del Barrio La Alborada', 10, 10);
     
     documentPDF.autoTable(
         {
-            head: [['Árbol 1', 'Arbol 2', 'Distancia (km)']],
+            head: [['Árbol A', 'Arbol B', 'Distancia (km)']],
             body: distances
         }
 
@@ -109,3 +109,26 @@ function generatePDF(distances, totalTrees){
     documentPDF.save('Distancias_Árboles_La_Alborada.pdf');
 }
 
+btnIncidentes.addEventListener("click",
+    async ()=>{
+        let response = await fetch('incidentes_La_Alborada.geojson');
+        let datos = await response.json();
+
+        L.geoJSON(
+            datos,
+            {
+                pointToLayer: function(feature, latlng){
+
+                    return L.circleMarker(latlng, {
+                        radius: 5,
+                        fillColor: "red",
+                        weight: 1,
+                        opacity: 1,
+                        fillOpacity: 0.8
+                    })
+   
+                }
+            }
+        ).addTo(map);
+    }
+)
